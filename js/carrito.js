@@ -3,12 +3,12 @@ const mostrarCarrito = () =>{
     modalContainer.style.display = 'flex'
     const modalHeader = document.createElement('div');
     modalHeader.className = 'modal-header';
-    modalHeader.innerHTML = `<h2 class="modal-header-title">Carrito</h2>`;
+    modalHeader.innerHTML = `<h2 class="modal-header-title">Resumen de su compra</h2>`;
     modalContainer.append(modalHeader);
 
     const modalButton = document.createElement('h3');
     modalButton.className = 'modal-header-button';
-    modalButton.innerText = 'X';
+    modalButton.innerText = '✖';
     modalHeader.append(modalButton);
 
     modalButton.addEventListener('click', ()=>{

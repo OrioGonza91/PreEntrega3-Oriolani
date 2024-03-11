@@ -33,6 +33,7 @@ html{
     width: auto;
     border-radius: 10px;
     transition: all 0.7s;
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
 }
 
 .navbar-logo img:hover {
@@ -112,10 +113,14 @@ html{
     cursor: pointer;
     width: 180px;
     font-size: 18px;
+    border-radius: 10px;
+    transition: all .5s;
+    margin-top: 20px;
 }
 
 .card button:hover {
     opacity: .7;
+    transform: scale(1.1);
 }
 
 .modal-container {
@@ -132,6 +137,8 @@ html{
     z-index: 9;
     top: 12vh;
     scrollbar-color: none;
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    border-radius: 5px;
 }
 
 .modal-container::-webkit-scrollbar {
@@ -144,6 +151,7 @@ html{
     background-color: #0a0909;
     color: #fff;
     width: 100%;
+    text-transform: uppercase;
 }
 
 .modal-header-title {
@@ -230,5 +238,7 @@ footer .redes a {
     font-size: 28px;
     line-height: 30px;
     border-radius: 50%;
-    box-shadow: 0 0 10px;
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
 }
+
+

@@ -3,7 +3,7 @@ const shopContent = document.getElementById('shopContent'),
     modalContainer = document.getElementById('modalContainer'),
     cantidadCarrito = document.getElementById('cantidadCarrito');
 
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 productos.forEach((product)=> {
     let content = document.createElement('div');
@@ -23,6 +23,20 @@ productos.forEach((product)=> {
     comprar.addEventListener('click', ()=>{
 
     const repeat = carrito.some((repeatProduct)=>repeatProduct.id === product.id);
+
+    Toastify({
+        text: "¡Producto agregado!",
+        duration: 3000,
+        newWindow: true,
+        close: true,
+        gravity: "bottom", 
+        position: "left", 
+        stopOnFocus: true, 
+        style: {
+        background: "linear-gradient(to right, #897C6B, #121212)",
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
 
     if(repeat){
         carrito.map((prod)=>{
