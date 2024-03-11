@@ -18,7 +18,7 @@ const mostrarCarrito = () =>{
     carrito.forEach((product)=>{
         let carritoContent = document.createElement('div');
         carritoContent.className = 'modal-content';
-        carritoContent.innerHTML = `<img src="${product.img}">
+        carritoContent.innerHTML = `<img class="imagen-modal" src="${product.img}">
         <h3>${product.nombre}</h3>
         <p>$${product.precio}</p>
         <span class= "restar"> - </span>

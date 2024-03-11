@@ -33,7 +33,7 @@ html{
     width: auto;
     border-radius: 10px;
     transition: all 0.7s;
-    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    box-shadow: 0 0 10px #a06f2f;
 }
 
 .navbar-logo img:hover {
@@ -137,7 +137,7 @@ html{
     z-index: 9;
     top: 12vh;
     scrollbar-color: none;
-    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    box-shadow: 0 0 10px #a06f2f;
     border-radius: 5px;
 }
 
@@ -238,7 +238,10 @@ footer .redes a {
     font-size: 28px;
     line-height: 30px;
     border-radius: 50%;
-    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff;
+    box-shadow: 0 0 10px #a06f2f;
 }
 
-
+.imagen-modal{
+    border-radius: 20%;
+    box-shadow: 0 0 5px #fff;
+}
