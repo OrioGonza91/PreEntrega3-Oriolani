@@ -16,23 +16,26 @@ const mostrarCarrito = () =>{
     })
 
     carrito.forEach((product)=>{
+
+        const {img,nombre,precio,cantidad,id} = product
+
         let carritoContent = document.createElement('div');
         carritoContent.className = 'modal-content';
-        carritoContent.innerHTML = `<img class="imagen-modal" src="${product.img}">
-        <h3>${product.nombre}</h3>
-        <p>$${product.precio}</p>
+        carritoContent.innerHTML = `<img class="imagen-modal" src="${img}">
+        <h3>${nombre}</h3>
+        <p>$${precio}</p>
         <span class= "restar"> - </span>
-        <p>Cantidad: ${product.cantidad}</p>
+        <p>Cantidad: ${cantidad}</p>
         <span class= "sumar"> + </span>
-        <p>SubTotal:${product.cantidad * product.precio}</p>
+        <p>SubTotal:${cantidad * precio}</p>
         <span class= "delete-product"> ❌ </span>`;
 
         modalContainer.append(carritoContent);
 
         let restar = carritoContent.querySelector('.restar');
         restar.addEventListener('click', ()=>{
-            if(product.cantidad !== 1){
-                product.cantidad--;
+            if(cantidad !== 1){
+                cantidad--;
                 saveLocal();
                 mostrarCarrito();
             }
@@ -40,14 +43,14 @@ const mostrarCarrito = () =>{
 
         let sumar = carritoContent.querySelector('.sumar');
         sumar.addEventListener('click', ()=>{
-            product.cantidad++;
+            cantidad++;
             saveLocal();
             mostrarCarrito();
         })
 
         let eliminar = carritoContent.querySelector('.delete-product');
         eliminar.addEventListener('click', ()=>{
-            eliminarProducto(product.id)
+            eliminarProducto(id)
         })
         // let eliminar = document.createElement('span');
         // eliminar.innerText ='❌';
