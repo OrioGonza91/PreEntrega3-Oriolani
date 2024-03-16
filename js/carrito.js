@@ -34,8 +34,8 @@ const mostrarCarrito = () =>{
 
         let restar = carritoContent.querySelector('.restar');
         restar.addEventListener('click', ()=>{
-            if(cantidad !== 1){
-                cantidad--;
+            if(product.cantidad !== 1){
+                product.cantidad--;
                 saveLocal();
                 mostrarCarrito();
             }
@@ -43,14 +43,14 @@ const mostrarCarrito = () =>{
 
         let sumar = carritoContent.querySelector('.sumar');
         sumar.addEventListener('click', ()=>{
-            cantidad++;
+            product.cantidad++;
             saveLocal();
             mostrarCarrito();
         })
 
         let eliminar = carritoContent.querySelector('.delete-product');
         eliminar.addEventListener('click', ()=>{
-            eliminarProducto(id)
+            eliminarProducto(product.id)
         })
         // let eliminar = document.createElement('span');
         // eliminar.innerText ='❌';
