@@ -1,7 +1,8 @@
 const shopContent = document.getElementById('shopContent'),
     verCarrito = document.getElementById('verCarrito'),
     modalContainer = document.getElementById('modalContainer'),
-    cantidadCarrito = document.getElementById('cantidadCarrito');
+    cantidadCarrito = document.getElementById('cantidadCarrito'),
+    logout = document.querySelector('#btn-logout')
 
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -63,4 +64,13 @@ const saveLocal = ()=>{
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
+const user =  JSON.parse(localStorage.getItem('login_success')) || false
+if(!user){
+    window.location.href = 'login.html'
+}
 
+logout.addEventListener('click', ()=>{
+alert('¡Hasta pronto!')
+localStorage.removeItem('login_success')
+window.location.href = 'login.html'
+})

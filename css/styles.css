@@ -40,7 +40,7 @@ html{
     transform: scale(1.1);
 }
 
-.ver-carrito {
+.ver-carrito, .logout{
     font-size: 30px;
     margin-right: 50px;
     margin-top: 3vh;
@@ -246,3 +246,78 @@ footer .redes a {
     border-radius: 20%;
     box-shadow: 0 0 5px #fff;
 }
+
+/* ===================== Login & Signup =================*/
+
+.login-body, .signup-body {
+    background-image: url(../img/loginBackground.avif);
+    background-position: center;
+    background-size: cover;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    font-family: montserrat;
+}
+
+section h2{
+    text-align: center;
+    width: 100%;
+    margin-bottom: .1em;
+    font-size: 2.5em;
+    color: #a06f2f;
+}
+
+section form {
+    padding: 1.5em;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    border: none;
+}
+
+section form label {
+    width: 100%;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+    color: #fff;
+}
+
+section form input {
+    width: 100%;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    border-radius: 9px;
+    border: none;
+    outline-color: #a06f2f;
+    background-color: #eee;
+}
+
+section form input[type='submit'] {
+    margin-top: 1.5em;
+    background-color: #333;
+    box-shadow: 0 0 10px #a06f2f;
+    color: #fff;
+    transition: all cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+section form input[type='submit']:active {
+    transform: scale(.97);
+}
+
+section p {
+    margin-top: 1.5em;
+    color: #fff;
+}
+
+section p a {
+    text-decoration: none;
+    color: #a06f2f;
+}
+
