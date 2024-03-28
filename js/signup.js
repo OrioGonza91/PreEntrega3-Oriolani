@@ -9,7 +9,14 @@ signupForm.addEventListener('submit', (e) => {
 
     const isUserRegistered = users.find(user => user.email === email)
     if (isUserRegistered) {
-        return alert('¡El usuario ya está registrado!')
+        return Swal.fire({
+            position: "top",
+            icon: "error",
+            iconColor:"#a06f2f",
+            title: "¡El usuario ya está registrado!",
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 
     users.push({
@@ -18,6 +25,15 @@ signupForm.addEventListener('submit', (e) => {
         password: password
     })
     localStorage.setItem('users', JSON.stringify(users))
-    alert('¡Registro exitoso!')
-    window.location.href = 'login.html'
+    Swal.fire({
+        position: "top",
+        icon: "success",
+        iconColor:"#a06f2f",
+        title: "¡Registro exitoso!",
+        showConfirmButton: false,
+        timer: 2000
+    })
+    setTimeout(()=>{
+        window.location.href = 'index.html'
+    }, 2500)
 })

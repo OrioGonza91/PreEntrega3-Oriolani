@@ -10,10 +10,26 @@ loginForm.addEventListener('submit', (e)=>{
     const validUser = users.find(user => user.email === email && user.password === password)
 
     if(!validUser){
-        return alert('¡Usuario y/o contraseña incorrectos!')
+        return Swal.fire({
+            position: "top",
+            icon: "error",
+            iconColor:"#a06f2f",
+            title: "¡Usuario y/o contraseña incorrectos!",
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 
-    alert(`Bienvenido ${validUser.name}`)
+    Swal.fire({
+        position: "top",
+        icon: "success",
+        iconColor:"#a06f2f",
+        title: `Bienvenido/a ${validUser.name}`,
+        showConfirmButton: false,
+        timer: 2000
+    })
     localStorage.setItem('login_success', JSON.stringify(validUser))
-    window.location.href = 'index.html'
+    setTimeout(()=>{
+        window.location.href = 'products.html'
+    }, 3000)
 })

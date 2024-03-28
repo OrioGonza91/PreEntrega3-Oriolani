@@ -97,6 +97,7 @@ html{
     width: 280px;
     height: 300px;
     border-radius: 20px;
+    object-fit: cover;
 }
 
 .price {
@@ -320,4 +321,3 @@ section p a {
     text-decoration: none;
     color: #a06f2f;
 }
-
