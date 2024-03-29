@@ -158,6 +158,7 @@ html{
 
 .modal-header-title {
     justify-self: start;
+    text-decoration: underline;
 }
 
 .modal-header-button {
@@ -207,6 +208,21 @@ html{
     cursor: pointer;
 }
 
+.checkout {
+    background-color: #a06f2f;
+    height: 3.5em;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 8px;
+    color: #eee;
+    border: none;
+    cursor: pointer;
+}
+
+.checkout:hover {
+    background-color: #a06f2fbe;
+}
+
 /* footer */
 
 footer {
@@ -221,6 +237,7 @@ footer {
 
 footer .redes {
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 footer .redes a {

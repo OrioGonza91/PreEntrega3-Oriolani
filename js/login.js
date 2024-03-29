@@ -14,6 +14,7 @@ loginForm.addEventListener('submit', (e)=>{
             position: "top",
             icon: "error",
             iconColor:"#a06f2f",
+            width: '15em',
             title: "¡Usuario y/o contraseña incorrectos!",
             showConfirmButton: false,
             timer: 1500
@@ -24,6 +25,7 @@ loginForm.addEventListener('submit', (e)=>{
         position: "top",
         icon: "success",
         iconColor:"#a06f2f",
+        width: '25em',
         title: `Bienvenido/a ${validUser.name}`,
         showConfirmButton: false,
         timer: 2000

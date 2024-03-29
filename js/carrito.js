@@ -59,6 +59,34 @@ const mostrarCarrito = () =>{
     totalCompra.className = 'total-content';
     totalCompra.innerText = `Total a pagar: $${total}`;
     modalContainer.append(totalCompra);
+
+    const checkout = document.createElement('button');
+    checkout.className = 'checkout';
+    checkout.innerText = 'Finalizar compra'.toUpperCase();
+    modalContainer.append(checkout);
+
+    checkout.addEventListener('click', ()=>{
+        if(total === 0){
+            Swal.fire({
+                position: "center",
+                title: 'Su carrito está vacío  ☹',
+                text: '¡Lo invitamos a ver nuestros productos!',
+                showConfirmButton: true,
+                confirmButtonColor: '#a06f2f'
+            });
+        } else{
+            Swal.fire({
+                position: "center",
+                title: `El total de su compra es $${total}`,
+                text: '¡Muchas gracias por su compra!',
+                showConfirmButton: true,
+                confirmButtonColor: '#a06f2f'
+            });
+            localStorage.removeItem('carrito')
+            window.location.reload()
+        }
+        
+    })
 };
 
 verCarrito.addEventListener('click', mostrarCarrito);

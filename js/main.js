@@ -6,6 +6,7 @@ const shopContent = document.getElementById('shopContent'),
 
 let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
+//Asincronía
 fetch("./db/db.json")
 .then((res)=> res.json())
 .then((data)=>{
@@ -79,7 +80,9 @@ if (!user) {
 logout.addEventListener('click', () => {
     Swal.fire({
         position: "top",
-        title: "¿Quieres cerrar sesión?",
+        title: "¿Quiere cerrar sesión?",
+        text: "Si tiene productos en el carrito, serán removidos",
+        width: '25em',
         icon: "warning",
         iconColor:"#a06f2f",
         showCancelButton: true,
@@ -91,10 +94,12 @@ logout.addEventListener('click', () => {
             Swal.fire({
                 title: "¡Hasta pronto!",
                 icon: "success",
+                width: '18em',
                 iconColor:"#a06f2f",
                 showConfirmButton: false
             })
             localStorage.removeItem('login_success')
+            localStorage.removeItem('carrito')
             setTimeout(() => {
                 window.location.href = 'index.html'
             }, 2500)
