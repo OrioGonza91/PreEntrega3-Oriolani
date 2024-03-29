@@ -11,7 +11,7 @@ loginForm.addEventListener('submit', (e)=>{
 
     if(!validUser){
         return Swal.fire({
-            position: "top",
+            position: "center",
             icon: "error",
             iconColor:"#a06f2f",
             width: '18em',
@@ -22,7 +22,7 @@ loginForm.addEventListener('submit', (e)=>{
     }
 
     Swal.fire({
-        position: "top",
+        position: "center",
         icon: "success",
         iconColor:"#a06f2f",
         width: '25em',

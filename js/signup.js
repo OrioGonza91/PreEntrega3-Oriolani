@@ -10,7 +10,7 @@ signupForm.addEventListener('submit', (e) => {
     const isUserRegistered = users.find(user => user.email === email)
     if (isUserRegistered) {
         return Swal.fire({
-            position: "top",
+            position: "center",
             icon: "error",
             iconColor:"#a06f2f",
             title: "¡El usuario ya está registrado!",
@@ -26,7 +26,7 @@ signupForm.addEventListener('submit', (e) => {
     })
     localStorage.setItem('users', JSON.stringify(users))
     Swal.fire({
-        position: "top",
+        position: "center",
         icon: "success",
         iconColor:"#a06f2f",
         title: "¡Registro exitoso!",

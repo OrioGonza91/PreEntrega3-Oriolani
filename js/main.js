@@ -34,7 +34,6 @@ fetch("./db/db.json")
                 text: "¡Producto agregado!",
                 duration: 3000,
                 newWindow: true,
-                close: true,
                 gravity: "bottom",
                 position: "left",
                 stopOnFocus: true,
@@ -79,7 +78,7 @@ if (!user) {
 
 logout.addEventListener('click', () => {
     Swal.fire({
-        position: "top",
+        position: "center",
         title: "¿Quiere cerrar sesión?",
         text: "Si tiene productos en el carrito, serán removidos",
         width: '25em',
