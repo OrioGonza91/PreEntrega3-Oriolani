@@ -14,7 +14,7 @@ loginForm.addEventListener('submit', (e)=>{
             position: "top",
             icon: "error",
             iconColor:"#a06f2f",
-            width: '15em',
+            width: '18em',
             title: "¡Usuario y/o contraseña incorrectos!",
             showConfirmButton: false,
             timer: 1500

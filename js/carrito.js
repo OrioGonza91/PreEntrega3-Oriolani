@@ -77,13 +77,30 @@ const mostrarCarrito = () =>{
         } else{
             Swal.fire({
                 position: "center",
-                title: `El total de su compra es $${total}`,
-                text: '¡Muchas gracias por su compra!',
-                showConfirmButton: true,
-                confirmButtonColor: '#a06f2f'
-            });
-            localStorage.removeItem('carrito')
-            window.location.reload()
+                title: "¿Desesa finalizar su compra?",
+                text: `El total de su compra es $${total}`,
+                width: '25em',
+                icon: "info",
+                iconColor:"#a06f2f",
+                showCancelButton: true,
+                cancelButtonText: 'Cancelar',
+                confirmButtonColor: "#a06f2f",
+                cancelButtonColor: "#333",
+                confirmButtonText: "Sí",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire({
+                        title: "¡Gracias por su compra!",
+                        icon: "success",
+                        width: '18em',
+                        iconColor:"#a06f2f",
+                        showConfirmButton: false,
+                    })
+                setTimeout(()=>{
+                    localStorage.removeItem('carrito')
+                    window.location.reload()
+                },3000)
+            }})
         }
         
     })
