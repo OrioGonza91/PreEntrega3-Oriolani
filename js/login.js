@@ -32,6 +32,6 @@ loginForm.addEventListener('submit', (e)=>{
     })
     localStorage.setItem('login_success', JSON.stringify(validUser))
     setTimeout(()=>{
-        window.location.href = 'products.html'
+        window.location.href = 'pages/products.html'
     }, 3000)
 })

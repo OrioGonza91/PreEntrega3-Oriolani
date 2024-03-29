@@ -73,7 +73,7 @@ const saveLocal = () => {
 
 const user = JSON.parse(localStorage.getItem('login_success')) || false
 if (!user) {
-    window.location.href = 'index.html'
+    window.location.href = '../index.html'
 }
 
 logout.addEventListener('click', () => {
@@ -100,7 +100,7 @@ logout.addEventListener('click', () => {
             localStorage.removeItem('login_success')
             localStorage.removeItem('carrito')
             setTimeout(() => {
-                window.location.href = 'index.html'
+                window.location.href = '../index.html'
             }, 2500)
         }
     })

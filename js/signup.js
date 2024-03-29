@@ -34,6 +34,6 @@ signupForm.addEventListener('submit', (e) => {
         timer: 2000
     })
     setTimeout(()=>{
-        window.location.href = 'index.html'
+        window.location.href = '../index.html'
     }, 2500)
 })
